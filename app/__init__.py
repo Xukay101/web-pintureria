@@ -9,6 +9,6 @@ def create_app():
 
     @app.route('/')
     def index():
-        return 'Hello World'
+        return render_template("base.html")
 
     return app
