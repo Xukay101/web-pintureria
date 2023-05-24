@@ -1,45 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
-/* ----Variables---- */
+
 :root {
-
-    /* Colores primarios */
-    --color-primary: #458588; /* Blue */
-    --color-primary-light: #83a598; /* Blue claro */
-  
-    /* Colores secundarios */
-    --color-secondary: #d79921; /* Amarillo */
-    --color-secondary-light: #fabd2f; /* Amarillo claro */
-  
-    /* Colores de texto */
-    --color-text: #282828; /* Beige */
-    --color-text-light: #ebdbb2; /* Beige claro */
-    --color-text-light-2: #a89984; /* Beige oscuro */
-  
-    /* Colores de fondo */
-    --color-background: #282828; /* Gris oscuro */
-    --color-background-light: #fbf1c7; /* Beige claro */
-    --color-background-light-2: #a89984; /* Beige oscuro */
-    --color-background-transparent: rgba(200, 180, 140, 0.1);
-
-    /* Tipografía */
-    --font-family: 'Rubik', sans-serif;
-    --font-family-2: 'Rufina', sans-serif;
-    --font-size: 16px;
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
-  
+    /* Paleta colores */
+    --color-primary: #e74423;
+    /* Color primario */
+    --color-secondary: #f1f0de;
+    /* Color secundario */
+    --color-text-primary: #333;
+    /* Color de texto principal */
+    --color-text-secondary: #e74423;
+    /* Color de texto principal */
+    --color-background-secondary: #e74423;
+    /* Color de texto principal */
+    --color-background: #f1f0de;
+    /* Color de fondo */
+    /* Tipografia */
+    --normal: 18px;
     /* Espaciado */
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 24px;
-  
-    /* Caja de sombra */
-    --shadow: 3px 0 5px #aaa;
+    --space: 10px;
+    /* Box shadow */
+    --box: 0px 0.625vh 1.25vh rgba(0, 0, 0, 0.1);
 }
 
+html,
 body {
-  padding: 20px;
-  background: #fafafa;
-  position: relative;
+    padding: 0px;
+    margin: 0px;
+    font-size: var(--normal);
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--color-background);
+}
+
+.bg-footer {
+  background-color: var(--color-background-secondary);
+}
+
+.logo {
+  width: 70px;
+}
+
+.bg-primary-custom {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary-custom {
+  background-color: var(--color-secondary);
+}
+
+.text-primary-custom {
+  color: var(--color-text-primary);
+}
+
+.text-secondary-custom {
+  color: var(--color-text-secondary);
+}
+
+footer img{
+  width: 100px;
 }
