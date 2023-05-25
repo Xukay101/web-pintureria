@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<!-- Hero -->
 <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="{{ url_for('static', filename='images/local00.jpg') }}" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="{{ url_for('static', filename='images/local04.jpg') }}" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="{{ url_for('static', filename='images/local09.jpg') }}" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -21,5 +23,26 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+</div>
+<!-- End Hero -->
+
+
+<!-- About us -->
+<div class="bg-light">
+  <div class="container py-5">
+    <div class="row h-100 align-items-center py-5">
+      <div class="col-lg-6">
+        <h1 class="display-4">About us page</h1>
+        <p class="lead text-muted mb-0">Create a minimal about us page using Bootstrap 4.</p>
+        <p class="lead text-muted">Snippet by <a href="https://bootstrapious.com/snippets" class="text-muted"> 
+                    <u>Bootstrapious</u></a>
+        </p>
+      </div>
+      <div class="col-lg-6 d-none d-lg-block">
+        <img src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="" class="img-fluid">
+      </div>
+    </div>
   </div>
+</div>
+<!-- End About us -->
 {% endblock%}

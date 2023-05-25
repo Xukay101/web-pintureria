@@ -6,12 +6,12 @@
     rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='animations.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
 <!-- End link's -->
 
 <!-- Navbar -->
-<nav class="navbar p-0 navbar-expand-sm navbar-light shadow-sm bg-dark">
+<nav class="navbar p-0 navbar-expand-sm navbar-dark shadow-sm bg-dark">
     <div class="container-fluid m-0">
         <a class="navbar-brand p-0" href>
             <img src="{{ url_for('static', filename='images/logo1.jpg') }}" class="img-fluid logo" width="200" height="200" alt="DC">
@@ -53,14 +53,11 @@
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Menu</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre
-                nosotros</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre nosotros</a></li>
     </ul>
-    <a class="navbar-brand p-0" href="#">
-        <h1>Logo</h1>
-        <!-- <img src="{{ url_for('static', filename='images/logo.jpg') }}"
-        class="rounded mx-auto d-block" alt="..."> -->
-    </a>
+    <p class="text-center">
+    <img src="{{ url_for('static', filename='images/logo1.jpg') }}" class="img-fluid logo" width="200" height="200" alt="DC">
+    </p>
 </footer>
 <!-- Footer -->
 
