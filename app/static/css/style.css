@@ -58,3 +58,46 @@ body {
 footer img{
   width: 100px;
 }
+
+
+/* Buttons customs */
+.btn{
+    border: 2px solid #fff;
+    border-radius: 1.5rem;
+    padding: 0.6rem 0;
+    width: 160px;
+}
+.btn-primary-custom{
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.55rem 0;
+    width: 140px;
+}
+.btn-primary-custom:hover{
+    color: var(--color-primary);
+    background: #fff;
+    border-color: var(--green);
+}
+
+/* carrousel */
+.rounded-3 {
+  border-radius: 30px !important;
+}
+
+/* header */
+header{
+  height: 100vh;
+}
+.btn-header:hover{
+  background-color: #fff;
+  color: var(--color-primary)!important;
+}
+.header-img img{
+  width: 500px;
+}
+
+
+/* about us */
+#about-us img {
+  filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
+}

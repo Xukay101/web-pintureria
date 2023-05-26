@@ -1,48 +1,65 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block title %}Home{% endblock %}
 
+{% block header %}
 <!-- Hero -->
-<div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{{ url_for('static', filename='images/local00.jpg') }}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ url_for('static', filename='images/local04.jpg') }}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ url_for('static', filename='images/local09.jpg') }}" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden text-warning">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+<div class = "row">
+  <div class = "col-lg-6 text-white text-center text-lg-start">
+      <h1 class = "display-1 fw-normal mt-5 animate__animated animate__backInLeft">Frase Motivadora!</h1>
+      <p class = "my-4 lead fs-5 animate__animated animate__backInLeft">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus tempora possimus quam aperiam hic. Consequatur eum atque molestias exercitationem quos!</p>
+      <button type = "button" class = "btn fw-bold text-white mt-4 btn-header animate__animated animate__backInUp">Productos</button>
+  </div>
+  <div class = "col-lg-6 header-img d-none d-lg-flex justify-content-end gx-0 mt-5 animate__animated animate__backInRight">
+      <img src = "{{ url_for('static', filename='images/EnduidoPlastico-2044-Png-Web.png') }}">
+  </div>
 </div>
 <!-- End Hero -->
+{% endblock %}
 
-
+{% block content %}
 <!-- About us -->
-<div class="bg-light">
+<div class="bg-light" id="about-us">
   <div class="container py-5">
     <div class="row h-100 align-items-center py-5">
       <div class="col-lg-6">
-        <h1 class="display-4">About us page</h1>
-        <p class="lead text-muted mb-0">Create a minimal about us page using Bootstrap 4.</p>
-        <p class="lead text-muted">Snippet by <a href="https://bootstrapious.com/snippets" class="text-muted"> 
+        <h1 class="display-4 animate__animated animate__flipInX">Sobre nosotros</h1>
+        <p class="lead text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, non suscipit. Fugiat quibusdam totam voluptatibus.</p>
+        <p class="lead text-muted"> dolor sit amet <a href="https://bootstrapious.com/snippets" class="text-muted"> 
                     <u>Bootstrapious</u></a>
         </p>
       </div>
       <div class="col-lg-6 d-none d-lg-block">
-        <img src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="" class="img-fluid">
+        <img src="{{ url_for('static', filename='images/dc_logo_vector.png') }}" alt="" class="img-fluid">
       </div>
     </div>
   </div>
 </div>
 <!-- End About us -->
+
+<!-- Carrousel-->
+<div id="carouselExample" class="carousel slide p-5 bg-primary-custom">
+  <div class="container">
+  <div class="carousel-inner rounded">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='images/local10.jpg') }}" class="d-block w-100 rounded-3" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/local06.jpg') }}" class="d-block w-100 rounded-3" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/local07.jpg') }}" class="d-block w-100 rounded-3" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden text-warning">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+</div>
+<!-- End carrousel-->
 {% endblock%}
