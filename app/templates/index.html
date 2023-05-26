@@ -23,13 +23,13 @@
   <div class="container py-5">
     <div class="row h-100 align-items-center py-5">
       <div class="col-lg-6">
-        <h1 class="display-4 animate__animated animate__flipInX">Sobre nosotros</h1>
-        <p class="lead text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, non suscipit. Fugiat quibusdam totam voluptatibus.</p>
-        <p class="lead text-muted"> dolor sit amet <a href="https://bootstrapious.com/snippets" class="text-muted"> 
+        <h1 class="display-4" data-aos="fade-down">Sobre nosotros</h1>
+        <p class="lead text-muted mb-0" data-aos="fade-down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, non suscipit. Fugiat quibusdam totam voluptatibus.</p>
+        <p class="lead text-muted" data-aos="fade-up"> dolor sit amet <a href="https://bootstrapious.com/snippets" class="text-muted"> 
                     <u>Bootstrapious</u></a>
         </p>
       </div>
-      <div class="col-lg-6 d-none d-lg-block">
+      <div class="col-lg-6 d-none d-lg-block" data-aos="flip-left">
         <img src="{{ url_for('static', filename='images/dc_logo_vector.png') }}" alt="" class="img-fluid">
       </div>
     </div>
@@ -40,7 +40,7 @@
 <!-- Carrousel-->
 <div id="carouselExample" class="carousel slide p-5 bg-primary-custom">
   <div class="container">
-  <div class="carousel-inner rounded">
+  <div class="carousel-inner rounded" data-aos="fade-down">
     <div class="carousel-item active">
       <img src="{{ url_for('static', filename='images/local10.jpg') }}" class="d-block w-100 rounded-3" alt="...">
     </div>
