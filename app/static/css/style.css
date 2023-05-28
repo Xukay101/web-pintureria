@@ -101,16 +101,3 @@ header{
 #about-us img {
   filter: drop-shadow(12px 12px 7px rgba(70, 69, 69, 0.7));
 }
-
-#about-us {
-  background: #090909;
-
-}
-
-.display-4 {
-  color:white;
-}
-
-.lead text-muted mb-0 {
-  color:beige;
-} 
