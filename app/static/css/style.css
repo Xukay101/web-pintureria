@@ -59,6 +59,10 @@ footer img{
   width: 100px;
 }
 
+.border-3 {
+  border: 3px solid;
+}
+
 
 /* Buttons customs */
 .btn{
@@ -86,7 +90,7 @@ footer img{
 
 /* header */
 header{
-  height: 100vh;
+  min-height: 100vh;
 }
 .btn-header:hover{
   background-color: #fff;
