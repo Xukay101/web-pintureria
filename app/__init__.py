@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, flash
 
 def create_app():
     app = Flask(__name__)
@@ -11,4 +11,8 @@ def create_app():
     def test():
         return render_template('base.html')
 
+    @app.route('/contact')
+    def contact():
+        return render_template('contact.html')
+ 
     return app
