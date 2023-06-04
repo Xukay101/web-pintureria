@@ -105,3 +105,13 @@ header{
 #about-us img {
   filter: drop-shadow(12px 12px 7px rgba(70, 69, 69, 0.7));
 }
+
+
+.link-dark:hover{
+  color: whitesmoke;
+}
+
+textarea{
+  resize: none;
+}
+
