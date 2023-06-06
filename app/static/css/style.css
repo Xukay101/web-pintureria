@@ -105,6 +105,16 @@ header{
   filter: drop-shadow(12px 12px 7px rgba(70, 69, 69, 0.7));
 }
 
+
+
+.link-dark:hover{
+  color: whitesmoke;
+}
+
+textarea{
+  resize: none;
+}
+
 /* Wsp Float Icon */
 .float{
 	position:fixed;
@@ -128,6 +138,8 @@ header{
 .my-float{
 	margin-top:16px;
 }
+
 .text-side-5{
   font-size: 22px;
 }
+
