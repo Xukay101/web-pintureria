@@ -21,7 +21,6 @@
     /* Box shadow */
     --box: 0px 0.625vh 1.25vh rgba(0, 0, 0, 0.1);
 }
-
 html,
 body {
     padding: 0px;
@@ -107,7 +106,6 @@ header{
 }
 
 
-<<<<<<< TASK-012/Create_contact_page
 
 .link-dark:hover{
   color: whitesmoke;
@@ -140,3 +138,8 @@ textarea{
 .my-float{
 	margin-top:16px;
 }
+
+.text-side-5{
+  font-size: 22px;
+}
+
