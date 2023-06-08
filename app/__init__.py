@@ -23,15 +23,14 @@ def create_app():
     def test():
         return render_template('base.html')
 
-    @app.route('/cart')
-    def cart():
-        return render_template('cart.html')
-
     def page_not_found(error):
         return render_template('not_found.html')
 
     from . import contact
     app.register_blueprint(contact.bp)
+    
+    from . import cart
+    app.register_blueprint(cart.bp)
     
     app.register_error_handler(404, page_not_found)
     return app
