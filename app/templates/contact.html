@@ -74,7 +74,7 @@
                             {% endfor %}
                             <form method="POST" id="contactForm"
                                 name="contactForm" class="contactForm"
-                                novalidate="novalidate">
+                                novalidate="novalidate" action="{{ url_for('contact.mail') }}">
                                 <div class="row">
                                     <div
                                         class="col-md-12 py-1 animate__animated animate__jackInTheBox">
@@ -82,7 +82,7 @@
                                             <input type="text"
                                                 class="form-control"
                                                 name="name" id="name"
-                                                placeholder="Nombre">
+                                                placeholder="Nombre" required />
                                         </div>
                                     </div>
                                     <div
@@ -91,7 +91,7 @@
                                             <input type="email"
                                                 class="form-control"
                                                 name="email" id="email"
-                                                placeholder="Email">
+                                                placeholder="Email" required />
                                         </div>
                                     </div>
                                     <div
@@ -100,7 +100,7 @@
                                             <input type="text"
                                                 class="form-control"
                                                 name="subject" id="subject"
-                                                placeholder="Asunto">
+                                                placeholder="Asunto" required>
                                         </div>
                                     </div>
                                     <div
