@@ -1,3 +1,4 @@
 Flask==2.3.1
 Werkzeug==2.3.0
 python-dotenv==1.0.0
+sendgrid==6.10.0

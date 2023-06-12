@@ -1,47 +1,74 @@
+<!DOCTYPE html>
 <title>{% block title %}{% endblock %} - Pintureria</title>
 
 <!-- Link's -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='animations.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <!-- End link's -->
 
-<!-- Navbar -->
-<nav class="navbar p-0 navbar-expand-sm navbar-light shadow-sm">
-    <div class="container-fluid m-0">
-        <a class="navbar-brand p-0" href>
-            <h1>Logo</h1>
-            <!-- <img src="{{ url_for('static', filename='images/logo.jpg') }}" class="img-fluid logo" alt="..."> -->
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mynavbar">
 
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#menu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">Sobre Nosotros</a>
-                </li>
-            </ul>
+<!-- Header -->
+<header class = "pb-5 overflow-hidden bg-primary-custom text-side-5">
+    <div class = "container">
+        <!-- Navbar -->
+        <nav class="navbar py-5 navbar-expand-sm navbar-dark animate__animated animate__backInDown">
+            <div class="container-fluid m-0">
+                <a class="navbar-brand p-0" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/dc_logo_vector.png') }}" class="img-fluid logo" alt="...">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
 
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href>Cart</a>
-                </li>
-            </ul>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about-us">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('contact.contact') }}">Contacto</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto list-group list-group-horizontal">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/dcpintureria/">
+                                <i class="bi bi-instagram" style="color:#ffffff"></i><i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/DCPINTURERIA">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for("cart.show_cart")}}">
+                            <i class="fas fa-shopping-cart" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                    </ul>
 
-        </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        {% block header %}{% endblock %}
+
     </div>
-</nav>
-<!-- End Navbar -->
+</header>
+<!-- End Header -->
 
 <!-- Content -->
 <section class="content">
@@ -49,19 +76,36 @@
 </section>
 <!-- End Content -->
 
+<!-- Wsp Float Icon -->
+<section class="wsp-float-icon" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.link/86jrcf" class="float animate__animated animate__zoomInDown" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+</section>
+<!-- End Wsp Float Icon -->
+
 <!-- Footer -->
-<footer class="py-3 my-0 bg-dark footer">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+<footer class="py-3 my-0 bg-dark footer text-light">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3 text-side-5">
+        <li class="nav-item"><a href="#hero" class="nav-link px-2 text-muted">Inicio</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Menu</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre
-                nosotros</a></li>
+        <li class="nav-item"><a href="#about-us" class="nav-link px-2 text-muted">Sobre nosotros</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contacto</a></li>
+        <li class="nav-item">
+            <a class="nav-link text-muted" href="https://www.instagram.com/dcpintureria/">
+                <i class="bi bi-instagram"></i><i class="fab fa-instagram"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-muted" href="https://www.facebook.com/DCPINTURERIA">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
     </ul>
-    <a class="navbar-brand p-0" href="#">
-        <h1>Logo</h1>
-        <!-- <img src="{{ url_for('static', filename='images/logo.jpg') }}"
-        class="rounded mx-auto d-block" alt="..."> -->
-    </a>
+    <p class="text-center">
+    <img src="{{ url_for('static', filename='images/dc_logo_vector.png') }}" class="img-fluid logo" width="200" height="200" alt="DC">
+    </p>
 </footer>
 <!-- Footer -->
 
@@ -74,4 +118,9 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <!-- Scripts -->
