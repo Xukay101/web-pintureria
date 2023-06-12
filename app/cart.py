@@ -21,9 +21,9 @@ def delete_to_cart():
 def add_to_cart():
     pass
 
-@bp.route('/get_date_to_buy')
-def get_date_to_buy():
-    pass
+@bp.route('/buyer')
+def buyer():
+    return render_template('buyer.html')
 
 @bp.route('/send_order')
 def send_order():

@@ -22,7 +22,7 @@ def create_app():
     @app.route('/test')
     def test():
         return render_template('base.html')
-
+    
     def page_not_found(error):
         return render_template('not_found.html')
 
