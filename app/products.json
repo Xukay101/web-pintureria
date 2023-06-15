@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Acrilmex Exterior",
+        "description": "Látex acrílico de alta calidad para exterior.",
+        "image": "images/AcrilmexExterior-2044-C-Png-Web.png",
+        "price": 8999.00
+    },
+    {
+        "id": 2,
+        "name": "Antióxido",
+        "description": "Antióxido, anticorrosivo para metales.",
+        "image": "images/Antioxido-2800-C-Png-Web.png",
+        "price": 4999.00
+    },
+    {
+        "id": 3,
+        "name": "Impermeabilizante",
+        "description": "Membrana poliuretánica para techos y muros",
+        "image": "images/Imper-4000-C-Png-Web.png",
+        "price": 11999.00
+    },
+    {
+        "id": 4,
+        "name": "Barniz marino",
+        "description": "Protector para madera con doble filtro solar.",
+        "image": "images/MaderaBarniz-Png-Web.png",
+        "price": 7999.00
+    },
+    {
+        "id": 5,
+        "name": "Pintura para piletas",
+        "description": "Pintura a base de caucho clorado.",
+        "image": "images/Piletaclorado-C-Png-Web.png",
+        "price": 9999.00
+    },
+    {
+        "id": 6,
+        "name": "Pintura Asfáltica",
+        "description": "Secado super rápido.",
+        "image": "images/PinturaAsfaltica-C-Png-Web.png",
+        "price": 4999.00
+    },
+    {
+        "id": 7,
+        "name": "Pintura para ladrillos",
+        "description": "Impermeabilizante con filtro UV.",
+        "image": "images/QuimexLadrillo-4095-C-Png-Web.png",
+        "price": 6999.00
+    },
+    {
+        "id": 8,
+        "name": "Pintura para pisos.",
+        "description": "Pintura acrílica antideslizante",
+        "image": "images/QuimexPisos-C-Png-Web.png",
+        "price": 8959.00
+    },
+    {
+        "id": 9,
+        "name": "Revestimiento plástico",
+        "description": "Impermeabilizante texturado",
+        "image": "images/Textumex-C-Png-Web.png",
+        "price": 11869.00
+    },
+    {
+        "id": 10,
+        "name": "Lasur",
+        "description": "Protector para madera brillante",
+        "image": "images/Wood-Lasur-Brillante-Png-Web.png",
+        "price": 7549.00
+    }
+]

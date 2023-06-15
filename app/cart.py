@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
-
 bp = Blueprint('cart', __name__)
 
 @bp.route('/cart')
@@ -17,9 +16,11 @@ def show_cart():
 def delete_to_cart():
     pass
 
-@bp.route('/add_to_cart')
-def add_to_cart():
-    pass
+@bp.route('/add_to_cart/<product>')
+def add_to_cart(product):
+    print(product)
+    return redirect('/products')
+    
 
 @bp.route('/buyer')
 def buyer():
@@ -28,3 +29,4 @@ def buyer():
 @bp.route('/send_order')
 def send_order():
     pass
+
