@@ -4,42 +4,46 @@
 
 {% block header %}
 
-<div class="container-fluid bg-trasparent my-4 p-3" style="position: relative">
-    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-      {% for product in products%}
-      <div class="col hp">
-        <div class="card h-100 shadow-sm">
-            <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top" alt="product.title" />
-          </a>
 
-          <div class="card-body">
-            <div class="clearfix mb-3">
-              <span class="float-start badge rounded-pill bg-success"> ${{product.price}} </span>
-  
-              <span class="float-end small text-muted text-uppercase aff-link">                        
-                <div class="col-md-12"><input type="number" name="quantity" class="form-control" min="1" max="100" value="1" placeholder="Quantity"></div>
-            </span>
-            </div>
-            <h5 class="card-title">
-              {{product.name}}
-            </h5>
+<!--
+<form method="POST" action="/add_to_cart">
+  {% for product in products %}
+  <div>
+    <h3>{{ product.name }}</h3>
+    <p>Precio: ${{ product.price }}</p>
+    <input type="number" name="quantity_{{ product.id }}" value="1" min="1">
+    <button type="button" onclick="decrementQuantity('{{ product.id }}')">-</button>
+    <button type="button" onclick="incrementQuantity('{{ product.id }}')">+</button>
+    <button type="submit" name="product_id" value="{{ product.id }}">Agregar al
+      carrito</button>
+  </div>
+  {% endfor %}
+</form>
+ -->
 
-            <h6 class="card-text">
-              {{product.description}}
-            </h6>
-
-            <div class="d-grid gap-2 my-4">
-  
-              <a href="{{url_for("cart.add_to_cart",product = product)}}" class="btn btn-warning bold-btn">Agregar</a>
-  
-            </div>
-
+<form method="POST" action="/add_to_cart" class="container">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-md-4">
+      <div class="card mb-3" style="border-radius: 15px;">
+        <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top" alt="{{  product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <div class="card-text" style="height: 80px; overflow-y: auto;">
+            {{ product.description }}
           </div>
+          <p class="card-text">Precio: ${{ product.price }}</p>
+          <div class="input-group mb-3">
+            <button type="button" class="btn btn-outline-secondary" onclick="decrementQuantity('{{ product.id }}')">-</button>
+            <input type="number" class="form-control" name="quantity_{{ product.id }}" value="1" min="1">
+            <button type="button" class="btn btn-outline-secondary" onclick="incrementQuantity('{{ product.id }}')">+</button>
+          </div>
+          <button type="submit" class="btn btn-custom btn-primary" name="product_id" value="{{ product.id }}">Agregar al carrito</button>
         </div>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
-  
+</form>
 
-  {%endblock%}
+{%endblock%}
