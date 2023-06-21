@@ -36,5 +36,8 @@ def create_app():
     from . import cart
     app.register_blueprint(cart.bp)
     
+    from . import products
+    app.register_blueprint(products.bp)
+    
     app.register_error_handler(404, page_not_found)
     return app

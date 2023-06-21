@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Productos{% endblock %}
+
+{% block header %}
+
+
+<!--
+<form method="POST" action="/add_to_cart">
+  {% for product in products %}
+  <div>
+    <h3>{{ product.name }}</h3>
+    <p>Precio: ${{ product.price }}</p>
+    <input type="number" name="quantity_{{ product.id }}" value="1" min="1">
+    <button type="button" onclick="decrementQuantity('{{ product.id }}')">-</button>
+    <button type="button" onclick="incrementQuantity('{{ product.id }}')">+</button>
+    <button type="submit" name="product_id" value="{{ product.id }}">Agregar al
+      carrito</button>
+  </div>
+  {% endfor %}
+</form>
+ -->
+
+<form method="POST" action="/add_to_cart" class="container">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-md-4">
+      <div class="card mb-3" style="border-radius: 15px;">
+        <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top" alt="{{  product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <div class="card-text" style="height: 80px; overflow-y: auto;">
+            {{ product.description }}
+          </div>
+          <p class="card-text">Precio: ${{ product.price }}</p>
+          <div class="input-group mb-3">
+            <button type="button" class="btn btn-outline-secondary" onclick="decrementQuantity('{{ product.id }}')">-</button>
+            <input type="number" class="form-control" name="quantity_{{ product.id }}" value="1" min="1">
+            <button type="button" class="btn btn-outline-secondary" onclick="incrementQuantity('{{ product.id }}')">+</button>
+          </div>
+          <button type="submit" class="btn btn-custom btn-primary" name="product_id" value="{{ product.id }}">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</form>
+
+{%endblock%}
