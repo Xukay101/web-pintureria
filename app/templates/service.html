@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Servicios{% endblock %}
+
+{% block header %}
+<div class="card mb-3 w-100 animate__animated animate__backInLeft">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/services1.jpg') }}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold animate__animated animate__shakeX">ASESORAMIENTO TÉCNICO</h5>
+          <p class="card-text text-muted">En cada una de nuestras sucursales te esperamos con los mejores profesionales que te ayudarán a seleccionar los productos adecuados para el acabado que necesitas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3 w-100 animate__animated animate__backInRight">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/services2.jpg') }}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold animate__animated animate__shakeX">COTIZACIONES ESPECIALES</h5>
+          <p class="card-text text-muted">Ofrecemos un servicio personalizado, orientado a constructoras, consorcios, pintores, arquitectos, etc brindando un servicio diferenciado para atender todo tipo de proyectos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3 w-100 animate__animated animate__backInLeft">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/services3.jpg') }}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold animate__animated animate__shakeX">SISTEMA TINTOMÉTRICO</h5>
+          <p class="card-text text-muted">Preparamos los colores al instante con el sistema tintométrico de Sherwin Williams, logrando siempre el color exacto que deseas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3 w-100 animate__animated animate__backInRight">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/services4.jpg') }}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold animate__animated animate__shakeX">FOTO SCANNER</h5>
+          <p class="card-text text-muted">Traenos o envíanos una foto del lugar que quieres pintar y te mostramos como puede quedar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3 w-100 animate__animated animate__backInLeft">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/services5.jpg') }}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold animate__animated animate__shakeX">POSNET A DOMICILIO</h5>
+          <p class="card-text text-muted">Para tu comodidad podés comprar desde tu casa, te lo llevamos a domicilio y además podés pagar con tu tarjeta de
+            crédito en tu casa gracias a nuestro posnet inalámbrico.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+animate__shakeX
