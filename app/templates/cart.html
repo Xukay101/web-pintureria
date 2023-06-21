@@ -14,7 +14,7 @@
                   <div class="p-5">
                     <div class="d-flex justify-content-between align-items-center mb-5">
                       <h1 class="fw-bold mb-0 text-black">Agregar al carrito</h1>
-                      <h6 class="mb-0 text-muted">{{contador_items}} Productos</h6>
+                      <h6 class="mb-0 text-muted">{{total_items}} Productos</h6>
                     </div>
 
                     <hr class="my-4">
@@ -23,12 +23,12 @@
                     <div class="row mb-4 d-flex justify-content-between align-items-center">
                       <div class="col-md-2 col-lg-2 col-xl-2">
                         <img
-                          src="{{url_for("static",filename=product.img_perfil)}}"
+                          src="{{url_for('static',filename=product.image)}}"
                           class="img-fluid rounded-3" alt="Cotton T-shirt">
                       </div>
                       <div class="col-md-3 col-lg-3 col-xl-3">
-                        <h6 class="text-muted">{{product.nombre}} </h6>
-                        <h6 class="text-black mb-0">{{product.descripcion}} </h6>
+                        <h6 class="text-muted">{{product.name}} </h6>
+                        <h6 class="text-black mb-0">{{product.description}} </h6>
                       </div>
                       <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                         <!--AGREGAR INPUT TEMPORAL
@@ -44,13 +44,16 @@
                           <i class="fas fa-plus"></i>
                         </button>
                         -->
-                        <h6 class="mb-0">{{product.cantidad}}</h6>
+                        <h6 class="mb-0">{{product.cant}}</h6>
                       </div>
                       <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                        <h6 class="mb-0">${{product.precio}} </h6>
+                        {% set product_total_price = product.price * product.cant -%}
+                        <h6 class="mb-0">${{product_total_price}} </h6>
                       </div>
                       <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                        <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                        <a href="/delete_to_cart?product_id={{product.id}}" class="text-muted">
+                          <i class="fas fa-times"></i>
+                        </a>
                       </div>
                     </div>
   
@@ -67,10 +70,10 @@
                     </div>
   
                     <div class="d-flex justify-content-center mb-5">
-                      <h5>${{total}}</h5>
+                      <h5>${{total_price}}</h5>
                     </div>
   
-                    <button type="button" class="btn btn-dark btn-block btn-lg"
+                    <button type="button" class="btn btn-custom btn-dark btn-block btn-lg"
                       data-mdb-ripple-color="dark">Enviar pedido</button>
   
                   </div>
@@ -82,5 +85,5 @@
       </div>
     </div>
   </section>
-  
+
 {%endblock%}
