@@ -23,6 +23,10 @@ def create_app():
     def test():
         return render_template('base.html')
     
+    @app.route('/services')
+    def services():
+        return render_template('service.html')
+    
     def page_not_found(error):
         return render_template('not_found.html')
 
