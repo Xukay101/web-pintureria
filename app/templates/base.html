@@ -36,18 +36,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 <div class="collapse navbar-collapse" id="mynavbar">
 
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{ url_for('services') }}">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('products.products') }}">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('services') }}">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('contact.contact') }}">Contacto</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto list-group list-group-horizontal">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.instagram.com/dcpintureria/">
+                            <a class="nav-link" target="_blank" href="https://www.instagram.com/dcpintureria/">
                                 <i class="bi bi-instagram" style="color:#ffffff"></i><i class="fab fa-instagram"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.facebook.com/DCPINTURERIA">
+                            <a class="nav-link" target="_blank" href="https://www.facebook.com/DCPINTURERIA">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
@@ -89,14 +89,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 <footer class="py-3 my-0 bg-dark footer text-light">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3 text-side-5">
         <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link px-2 text-muted">Inicio</a></li>
+        <li class="nav-item"><a href="{{ url_for('services') }}" class="nav-link px-2 text-muted">Servicios</a></li>
+        <li class="nav-item"><a href="{{ url_for('products.products') }}" class="nav-link px-2 text-muted">Productos</a></li>
         <li class="nav-item"><a href="{{ url_for('contact.contact') }}" class="nav-link px-2 text-muted">Contacto</a></li>
         <li class="nav-item">
-            <a class="nav-link text-muted" href="https://www.instagram.com/dcpintureria/">
+            <a class="nav-link text-muted" target="_blank" href="https://www.instagram.com/dcpintureria/">
                 <i class="bi bi-instagram"></i><i class="fab fa-instagram"></i>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-muted" href="https://www.facebook.com/DCPINTURERIA">
+            <a class="nav-link text-muted" target="_blank" href="https://www.facebook.com/DCPINTURERIA">
                 <i class="fab fa-facebook-f"></i>
             </a>
         </li>
