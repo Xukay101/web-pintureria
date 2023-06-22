@@ -4,14 +4,20 @@
 
 {% block header %}
 <!-- Hero -->
-<div class = "row">
-  <div class = "col-lg-6 text-white text-center text-lg-start">
-      <h1 class = "display-2 fw-normal mt-5 animate__animated animate__backInLeft">DC<br> PINTURERIA</h1>
-      <p class = "my-4 lead fs-5 animate__animated animate__backInLeft">Mira de cerca el presente que estas construyendo, porque debe parecerse al futuro.</p>
-      <a class = "btn btn-custom fw-bold text-white mt-4 btn-header animate_animated animate_backInUp" href="{{ url_for('products.products') }}">Productos</a>
-    </div>
-  <div class = "col-lg-6 header-img d-none d-lg-flex justify-content-end gx-0 mt-5 animate_animated animate_backInRight">
-      <img src = "{{ url_for('static', filename='images/EnduidoPlastico-2044-Png-Web.png') }}">
+<div class="row">
+  <div class="col-lg-6 text-white text-center text-lg-start">
+    <h1 class="display-2 fw-normal mt-5 animate__animated animate__backInLeft">DC<br>
+      PINTURERIA</h1>
+    <p class="my-4 lead fs-5 animate__animated animate__backInLeft">Mira de
+      cerca el presente que estas construyendo, porque debe parecerse al futuro.</p>
+    <a
+      class="btn btn-custom fw-bold text-white mt-4 btn-header animate__animated animate__backInUp"
+      href="{{ url_for('products.products') }}">Productos</a>
+  </div>
+  <div
+    class="col-lg-6 header-img d-none d-lg-flex justify-content-end gx-0 mt-5 animate__animated animate__backInRight">
+    <img
+      src="{{ url_for('static', filename='images/EnduidoPlastico-2044-Png-Web.png') }}">
   </div>
 </div>
 <!-- End Hero -->
@@ -24,13 +30,20 @@
     <div class="row h-100 align-items-center py-5">
       <div class="col-lg-6 text-light">
         <h1 class="display-4" data-aos="fade-down">Sobre nosotros</h1>
-        <p class="lead text-muted mb-0" data-aos="fade-up">Somos una empresa familiar, que está en el rubro hace más de 20 años, con el apoyo de Quitam S.A. 
-        y todos nuestros proveedores, hemos ido creciendo a lo largo de los años con una base sólida de esfuerzo, sacrificio y por sobre todas las cosas mucha dedicación.
-        Esto no hubiera sido posible sin la visión emprendedora de nuestro fundador Cesar D. Cabral y la confianza de nuestros clientes y amigos.
+        <p class="lead text-muted mb-0" data-aos="fade-up">Somos una empresa
+          familiar, que está en el rubro hace más de 20 años, con el apoyo de
+          Quitam S.A.
+          y todos nuestros proveedores, hemos ido creciendo a lo largo de los
+          años con una base sólida de esfuerzo, sacrificio y por sobre todas las
+          cosas mucha dedicación.
+          Esto no hubiera sido posible sin la visión emprendedora de nuestro
+          fundador Cesar D. Cabral y la confianza de nuestros clientes y amigos.
         </p>
       </div>
-      <div class="col-lg-6 d-none d-lg-block" data-aos="flip-left" data-aos-duration="2000">
-        <img src="{{ url_for('static', filename='images/dc_logo_vector.png') }}" alt="" class="img-fluid">
+      <div class="col-lg-6 d-none d-lg-block" data-aos="flip-left"
+        data-aos-duration="2000">
+        <img src="{{ url_for('static', filename='images/dc_logo_vector.png') }}"
+          alt class="img-fluid">
       </div>
     </div>
   </div>
@@ -40,25 +53,31 @@
 <!-- Carrousel-->
 <div id="carouselExample" class="carousel slide p-5 bg-primary-custom">
   <div class="container">
-  <div class="carousel-inner rounded" data-aos="zoom-in-down" data-aos-duration="2000">
-    <div class="carousel-item active">
-      <img src="{{ url_for('static', filename='images/local10.jpg') }}" class="d-block w-100 rounded-3" alt="...">
+    <div class="carousel-inner rounded" data-aos="zoom-in-down"
+      data-aos-duration="2000">
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename='images/local10.jpg') }}"
+          class="d-block w-100 rounded-3" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/local06.jpg') }}"
+          class="d-block w-100 rounded-3" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/local07.jpg') }}"
+          class="d-block w-100 rounded-3" alt="...">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="{{ url_for('static', filename='images/local06.jpg') }}" class="d-block w-100 rounded-3" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ url_for('static', filename='images/local07.jpg') }}" class="d-block w-100 rounded-3" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden text-warning">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden text-warning">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </div>
 <!-- End carrousel-->
