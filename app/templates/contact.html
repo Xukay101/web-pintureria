@@ -66,12 +66,6 @@
                             <h3
                                 class="mb-4 text-center animate__animated animate__jackInTheBox">Ponte
                                 en contacto con nosotros</h3>
-                            {% for message in get_flashed_messages() %}
-                            <div
-                                class="mb-4 w-100 text-center animate__animated animate__jackInTheBox">
-                                {{ message }}
-                            </div>
-                            {% endfor %}
                             <form method="POST" id="contactForm"
                                 name="contactForm" class="contactForm"
                                 novalidate="novalidate" action="{{ url_for('contact.mail') }}">
